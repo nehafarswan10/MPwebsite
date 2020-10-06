@@ -1,0 +1,9 @@
+ $msg = "Image uploaded successfully";
+ if (isset($_POST['delete'])){
+    $db = mysqli_connect("localhost", "root", "", "photos"); 
+
+    mysqli_query($db,'TRUNCATE TABLE images');
+  } 
+  
+  $result = mysqli_query($db, "SELECT * FROM image"); 
+  <!-- <?php include('adding.php'); ?> -->
